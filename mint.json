@@ -41,7 +41,7 @@
       "url": "https://mintlify.com/docs"
     },
     {
-      "name": "Community",
+      "name": "Playground",
       "icon": "slack",
       "url": "https://mintlify.com/community"
     },
@@ -58,7 +58,13 @@
     },
     {
       "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "pages": [
+        "essentials/markdown",
+        "essentials/code",
+        "essentials/images",
+        "essentials/settings",
+        "essentials/navigation"
+      ]
     },
     {
       "group": "API Documentation",
