@@ -7,8 +7,8 @@ description: "Start creating awesome QR codes in under 5 minutes"
 
 To use the QR API:
 
-- Register for an API key on the developer dashboard.
-- Make a GET request to the `https://api.qrapi.app/v1/qr/create` endpoint with your API key and the `text` parameter, which is the text you want to encode in the QR code.
+- Register for an API token on the developer dashboard.
+- Make a GET request to the `https://api.qrapi.app/v1/qr/create` endpoint with your API token and the `text` parameter, which is the text you want to encode in the QR code.
 - The API will return the QR code image in the format you specified.
 
 ## "Hello, World!" example
@@ -16,10 +16,10 @@ To use the QR API:
 Here's an example of a request to create a QR code with the data "Hello, World!" in PNG format:
 
 ```
-https://api.qrapi.app/v1/qr/create?text=Hello%2C+World%21&apiKey=<YOUR_API_LEY>
+https://api.qrapi.app/v1/qr/create?text=Hello%2C+World%21&_token=<API_TOKEN>
 ```
 
-Remember to replace `<YOUR_API_KEY>` with your actual API key.
+Remember to replace `<API_TOKEN>` with your actual API token.
 
 ## Take advantage of interactive playground
 
