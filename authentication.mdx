@@ -1,22 +1,26 @@
 ---
 title: "Authentication"
-description: "Example overview page before API endpoints"
+description: "How to use Bearer authentication for API requests"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et eros iaculis tortor dapibus cursus. Curabitur quis sapien nec tortor dictum gravida.
+<img src="/images/authentication.png" alt="Hero Dark" />
 
-```bash
-'Authorization': 'Token <team_token>'
+To authenticate, you need to obtain an API token. You can get your API token by visiting your [dashboard](https://qrapi.app/dashboard). The token serves as a credential to authorize API requests.
+
+<Steps>
+  <Step title="Obtain the API token">
+    Obtain the API token from your [dashboard](https://qrapi.app/dashboard).
+  </Step>
+  <Step title="Use it in your API requests">
+    Include the API token in the `Authorization` header of your API requests
+    using the Bearer scheme - `Authorization: Bearer API_TOKEN`.
+  </Step>
+</Steps>
+
+### Example
+
 ```
-
-## API Tokens
-
-Nullam convallis mauris at nunc consectetur, ac imperdiet leo rutrum. Maecenas cursus purus a pellentesque blandit. Pellentesque vitae lacinia libero, non mollis metus.
-
-Nam id ullamcorper urna, at rutrum enim. [Maecenas vulputate](/introduction) vehicula libero, vitae sodales augue pretium nec. Quisque a magna tempor, semper risus vel, fermentum nunc. Pellentesque fermentum interdum ex, eu convallis massa blandit sed. Aliquam bibendum ipsum vel laoreet auctor.
-
-### Permissions
-
-Etiam lobortis ut odio ut fermentum. Nunc odio velit, sollicitudin at consectetur id, tristique eget turpis. Aliquam at risus vitae dolor sodales venenatis. In hac habitasse platea dictumst.
-
-Aenean consequat diam eget mollis fermentum. [Quisque eu malesuada](/introduction) felis, non dignissim libero.
+curl "https://api.qrapi.app/v1/qr/create?text=Hello%2C+World%21" \
+  -H 'Content-Type: application/json' \
+  -H "Authorization: Bearer <API_TOKEN>"
+```

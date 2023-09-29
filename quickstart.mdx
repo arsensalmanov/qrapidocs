@@ -7,16 +7,29 @@ description: "Start creating awesome QR codes in under 5 minutes"
 
 To use the QR API:
 
-- Register for an API token on the developer dashboard.
-- Make a GET request to the `https://api.qrapi.app/v1/qr/create` endpoint with your API token and the `text` parameter, which is the text you want to encode in the QR code.
-- The API will return the QR code image in the format you specified.
+<Steps>
+  <Step title="Obtain the API token">
+    Register for an API token on the developer
+    [dashboard](https://qrapi.app/dashboard).
+  </Step>
+  <Step title="Make an API requests">
+    Make a GET or POST request to the `https://api.qrapi.app/v1/qr/create`
+    endpoint with your API token and the `text` parameter, which is the text you
+    want to encode in the QR code.
+  </Step>
+  <Step title="Enjoy your result">
+    The API will return the QR code image in the format you specified.
+  </Step>
+</Steps>
 
 ## "Hello, World!" example
 
 Here's an example of a request to create a QR code with the data "Hello, World!" in PNG format:
 
 ```
-https://api.qrapi.app/v1/qr/create?text=Hello%2C+World%21&_token=<API_TOKEN>
+curl "https://api.qrapi.app/v1/qr/create?text=Hello%2C+World%21" \
+  -H 'Content-Type: application/json' \
+  -H "Authorization: Bearer <API_TOKEN>"
 ```
 
 Remember to replace `<API_TOKEN>` with your actual API token.
@@ -34,8 +47,12 @@ and getting the results you need.
   Experiment and create
 </Card>
 
-<Card title="API reference" icon="square-code" href="/api-reference">
-  Implement API interaction.
+<Card
+  title="OpenAPI spec"
+  icon="square-code"
+  href="https://api.qrapi.app/openapi"
+>
+  Explore OpenAPI specification
 </Card>
 
 </CardGroup>

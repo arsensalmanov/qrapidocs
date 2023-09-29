@@ -1,0 +1,39 @@
+---
+title: "Rate limits"
+description: "The rate limit restricts the number of API requests you can make within a specific time frame."
+---
+
+Your rate limit is determined by the terms of your subscription plan.
+To ensure you stay within your rate limit and effectively manage your API usage, there are several methods available:
+
+<AccordionGroup>
+  <Accordion title="Dashboard">
+    One of the most convenient ways to monitor your rate limit is by checking your dashboard on our platform. The dashboard provides a user-friendly interface that displays real-time information about your API usage, including the number of requests made and your remaining rate limit. It offers a comprehensive overview of your usage history, helping you keep track of your API consumption.
+  </Accordion>
+
+{" "}
+<Accordion title="Check requests header value">
+  When making API requests to create QR codes, the response headers include
+  valuable information regarding your rate limit. Specifically, the
+  "X-Rate-Limit-Limit" header specifies the total number of requests allowed
+  within the current rate-limiting period. By inspecting this header in the
+  response to your requests, you can easily determine your rate limit.
+</Accordion>
+
+  <Accordion title="Use dedicated API endpoint">
+    We provide a dedicated API endpoint designed to retrieve rate limit details.
+    When you make a GET request to this endpoint, it returns valuable information, including the remaining number of QR code creation requests you can make and the expiration date of the current rate-limiting period.
+    This endpoint offers programmatic access to your rate limit information, allowing you to automate rate limit monitoring.
+
+    ```
+    curl "https://api.qrapi.app/v1/qr/limit" \
+      -H 'Content-Type: application/json' \
+      -H "Authorization: Bearer <API_TOKEN>"
+    ```
+
+  </Accordion>
+</AccordionGroup>
+
+By employing these methods, you can effectively monitor your rate limit, stay informed about your API usage, and ensure that your QR code creation requests remain within the defined limits.
+
+If you find that your current rate limit does not meet your needs, consider upgrading your subscription plan.

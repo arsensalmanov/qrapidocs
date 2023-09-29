@@ -36,28 +36,15 @@
       "url": "https://qrapi.app/playground"
     },
     {
-      "name": "Prices",
+      "name": "OpenAPI Spec",
       "icon": "list",
-      "url": "https://qrapi.app/prices"
+      "url": "https://api.qrapi.app/openapi"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "authentication"]
-    },
-    {
-      "group": "API Reference",
-      "pages": ["api-reference/development"]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
-      ]
+      "pages": ["introduction", "quickstart", "authentication", "rate-limits"]
     }
   ]
 }
